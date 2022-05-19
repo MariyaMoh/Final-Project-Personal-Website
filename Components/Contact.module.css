@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&family=PT+Sans:wght@700&family=Roboto+Mono&family=Roboto:wght@100&family=Space+Mono&family=Truculenta:opsz,wght@12..72,100&display=swap');
+.contactinfo {
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  padding: 20px;
+ 
+}
+.contactdesc {
+  padding: 20px;
+}
+.contacttitle {
+  font-size: 40px;
+  font-weight: bold;
+}

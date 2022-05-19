@@ -1,0 +1,39 @@
+.aboutMesSection {
+  margin-bottom: 40px;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+.hg {
+  position: relative;
+
+  font-family: 'Space Mono', monospace;
+  font-size: medium;
+  top: 50%;
+  width: 20em;
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+
+  animation: typewriter 7s steps(54) 1s 1 normal both,
+    blinkTextCursor 500ms steps(54) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
