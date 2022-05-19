@@ -29,7 +29,7 @@ export default function ProfilePage({ profiles }: { profiles: Profile[] }) {
                 }}
                 data-aos="fade-right"
               >
-                <img
+                <img style={{borderRadius:5}}
                   // transition={{ type: 'spring', velocity: 10, stiffness: 30 }}
                   // initial={{ x: -300, opacity: 0 }}
                   // animate={{ x: 0, opacity: 1 }}
@@ -44,7 +44,7 @@ export default function ProfilePage({ profiles }: { profiles: Profile[] }) {
                 About Me
               </h1>
               <Card
-                css={{ mw: '400px', backgroundColor: '#A5C3FD' }}
+                css={{ mw: '400px', backgroundColor: '#ff80a9'}}
                 data-aos="fade-left"
               >
                 <Row gap={0} css={{ justifyContent: 'center' }}>

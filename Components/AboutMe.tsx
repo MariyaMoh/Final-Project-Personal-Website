@@ -5,12 +5,7 @@ import { Card, Row } from '@nextui-org/react';
 
 export default function AboutMe({ abouts }: { abouts: About[] }) {
   return (
-    <div
-      className={styles.aboutMesSection}
-      data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="2000"
-    >
+    <div className={styles.aboutMesSection}>
       <div>
         <div>
           <h1 id="Experience" className={styles.exptitle}>
@@ -20,18 +15,21 @@ export default function AboutMe({ abouts }: { abouts: About[] }) {
             <div key={abouts.id}>
               <Row className={styles.expcard} gap={10}>
                 <Card
+                  data-aos="zoom-in"
                   css={{ mw: '400px', m: '30px', backgroundColor: '#ffc466' }}
                 >
                   <p>{abouts.experienceTitle}</p>
                   <p>{abouts.description}</p>
                 </Card>
                 <Card
+                  data-aos="zoom-out"
                   css={{ mw: '400px', m: '30px', backgroundColor: '#6ecfbc' }}
                 >
                   <p>{abouts.experienceTitle}</p>
                   <p>{abouts.description}</p>
                 </Card>
                 <Card
+                  data-aos="zoom-in"
                   css={{ mw: '400px', m: '30px', backgroundColor: '#ff80a9' }}
                 >
                   <p>{abouts.experienceTitle}</p>

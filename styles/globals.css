@@ -2,12 +2,14 @@
 
 html {
   scroll-behavior: smooth;
+ 
 }
 
 body {
   padding: 2rem;
   margin: 0;
   font-family: 'Space Mono', monospace;
+  
 }
 
 a {
