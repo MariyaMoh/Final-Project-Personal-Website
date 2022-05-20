@@ -3,9 +3,6 @@
 .stitle {
   text-align: center;
 }
-.cardscover {
-  /* width: 350px; */
-}
 
 .cards {
   padding: 1rem 2rem;
@@ -16,6 +13,7 @@
 .ctitle {
   font-family: 'Space Mono', monospace;
   font-size: 20px;
+  
 }
 
 .servicesTitle {
@@ -29,4 +27,6 @@
   /* display: flex;
   flex-direction: row; */
   padding-top: 5rem;
+  
+  
 }

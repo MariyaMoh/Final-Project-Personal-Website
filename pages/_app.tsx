@@ -6,22 +6,20 @@ import { Header } from '../Components/Header';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { AnimatePresence } from 'framer-motion';
 
+function MyApp({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
-function MyApp({ Component, pageProps }: AppProps) {
- useEffect(() => {
-   Aos.init({duration:2000});
-   
- }, []);
-
-  
   return (
-    <NextUIProvider>
+    <AnimatePresence exitBeforeEnter>
       <div className={styles.PageContainer}>
         <Header />
-        <Component {...pageProps} />
+        <Component key={router.asPath} {...pageProps} />
       </div>
-    </NextUIProvider>
+    </AnimatePresence>
   );
 }
 

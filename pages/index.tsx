@@ -1,9 +1,9 @@
 import { gql } from '@apollo/client';
 import client from '../apolloClient';
-import AboutMe from '../Components/AboutMe';
+import Experience from '../Components/Experience';
 import Services from '../Components/Services';
 import { Service, Profile, About } from '../types';
-import ProfileSection from '../Components/ProfileSection';
+import ProfileSection from '../Components/AboutMe';
 import Footer from '../Components/Footer';
 import Contact from '../Components/Contact';
 import Movingtitle from '../Components/movingtitle';
@@ -21,7 +21,7 @@ export default function Home({ services, profiles, abouts }: HomeProps) {
       <Movingtitle />
       <ProfileSection profiles={profiles} />
       <Services services={services} />
-      <AboutMe abouts={abouts} />
+      <Experience abouts={abouts} />
 
       <Contact />
       <Footer />

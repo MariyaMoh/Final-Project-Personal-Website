@@ -46,11 +46,21 @@ export const Header = () => (
       className={styles.nav}
     >
       {navItems.map((item) => (
-        <span key={item.title}>
+        <motion.span
+          key={item.title}
+          transition={{
+            type: 'spring',
+            velocity: 100,
+            stiffness: 30,
+          }}
+          initial={{ y: -300, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 300, opacity: 0 }}
+        >
           <Link href={item.href}>
             <a className={styles.navLink}>{item.title}</a>
           </Link>
-        </span>
+        </motion.span>
       ))}
     </motion.nav>
   </header>

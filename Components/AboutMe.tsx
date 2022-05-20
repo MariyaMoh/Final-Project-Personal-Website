@@ -1,45 +1,73 @@
 import React from 'react';
-import { About } from '../types';
 import styles from './AboutMe.module.css';
-import { Card, Row } from '@nextui-org/react';
+import { useQuery, gql } from '@apollo/client';
+import { Profile } from '../types';
+import Image from 'next/image';
+import { Card, Row, Text, Col, styled } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 
-export default function AboutMe({ abouts }: { abouts: About[] }) {
+import editor from '/public/images/editor.png';
+
+export default function AboutMe({ profiles }: { profiles: Profile[] }) {
   return (
-    <div className={styles.aboutMesSection}>
-      <div>
-        <div>
-          <h1 id="Experience" className={styles.exptitle}>
-            Experience
-          </h1>
-          {abouts.map((abouts) => (
-            <div key={abouts.id}>
-              <Row className={styles.expcard} gap={10}>
-                <Card
-                  data-aos="zoom-in"
-                  css={{ mw: '400px', m: '30px', backgroundColor: '#ffc466' }}
-                >
-                  <p>{abouts.experienceTitle}</p>
-                  <p>{abouts.description}</p>
-                </Card>
-                <Card
-                  data-aos="zoom-out"
-                  css={{ mw: '400px', m: '30px', backgroundColor: '#6ecfbc' }}
-                >
-                  <p>{abouts.experienceTitle}</p>
-                  <p>{abouts.description}</p>
-                </Card>
-                <Card
-                  data-aos="zoom-in"
-                  css={{ mw: '400px', m: '30px', backgroundColor: '#ff80a9' }}
-                >
-                  <p>{abouts.experienceTitle}</p>
-                  <p>{abouts.description}</p>
-                </Card>
-              </Row>
+    <div
+      className={styles.ProfileSection}
+      style={{ justifyContent: 'space-between' }}
+    >
+      {profiles.map((profiles) => (
+        <div key={profiles.id} className={styles.CardContainer}>
+          {/* <Container gap={1}> */}
+          <Row gap={4} justify="center">
+            <Col className={styles.MainCard}>
+              <Card
+                className={styles.img}
+                css={{
+                  mw: '5000px',
+                  backgroundColor: '#A5C3FD',
+                  justifyContent: 'space-between',
+                }}
+                data-aos="fade-right"
+              >
+                <img
+                  style={{ borderRadius: 5 }}
+                  // transition={{ type: 'spring', velocity: 10, stiffness: 30 }}
+                  // initial={{ x: -300, opacity: 0 }}
+                  // animate={{ x: 0, opacity: 1 }}
+                  // exit={{ x: 300, opacity: 0 }}
+                  src={profiles.profileImage.url}
+                  alt=""
+                />
+              </Card>
+            </Col>
+            <Col>
+              <h1 className={styles.aboutTitle} id="AboutMe">
+                About Me
+              </h1>
+              <Card
+                css={{ mw: '400px', backgroundColor: '#ff80a9' }}
+                data-aos="fade-left"
+              >
+                <Row gap={0} css={{ justifyContent: 'center' }}>
+                  <Card css={{ mw: '400px' }}>
+                    <h6>{profiles.position}</h6>
+                  </Card>
+                </Row>
+              </Card>
+            </Col>
+
+            <div className={styles.EditorImageWrapper}>
+              <Image
+                className={styles.EditorImage}
+                src={editor.src}
+                width={125}
+                height={125}
+                alt="editor image"
+                data-aos="zoom-in-up"
+              />
             </div>
-          ))}
+          </Row>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

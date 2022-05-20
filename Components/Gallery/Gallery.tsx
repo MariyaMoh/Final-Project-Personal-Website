@@ -44,6 +44,7 @@ export default function Gallery({ images }: any) {
       <div className={styles.container}>
         <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
           <motion.img
+            className={styles.image}
             key={page}
             src={img.image.url}
             custom={direction}

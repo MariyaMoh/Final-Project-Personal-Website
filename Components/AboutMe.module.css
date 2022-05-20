@@ -1,60 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&family=PT+Sans:wght@700&family=Roboto+Mono&family=Roboto:wght@100&family=Space+Mono&family=Truculenta:opsz,wght@12..72,100&display=swap');
 
-.aboutMesSection {
-  margin-bottom: 40px;
-  margin-top: 10%;
-  display: flex;
-  justify-content: center;
+.MainCard {
+  text-align: center;
+  padding-top: 10%;
+  font-size: 48px;
+  text-shadow: 2px 2px 2px #aaa;
 }
 
-
-.exptitle{
-    font-family: 'Space Mono', monospace;
-    
-}
-
-.expcard{
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-/* .aboutMesSection{
-  
-} */
-
-.hg {
-  position: relative;
-
+.ProfileSection {
   font-family: 'Space Mono', monospace;
-  font-size: medium;
-  top: 50%;
-  width: 20em;
-  color: black;
-  margin: 0 auto;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
+}
 
-  animation: typewriter 7s steps(54) 1s 1 normal both,
-    blinkTextCursor 500ms steps(54) infinite normal;
+.CardContainer {
+  padding: 0 3rem;
 }
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 60em;
-  }
+
+.EditorImageWrapper {
+  position: absolute;
+  background-color: transparent;
+  padding: 50px;
+
+  right: 10%;
+  bottom: -40%;
 }
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
+
+.EditorImageWrapper span {
+  overflow: visible !important;
 }
+
+.EditorImage {
+  
+  transform: rotate(30deg);
+  /* z-index: -1; */
+}
+
+/* .twoCards {
+  display: flex;
+  flex-direction: row;
+} */
+/* .img{
+  border-radius: 3px;
+} */
